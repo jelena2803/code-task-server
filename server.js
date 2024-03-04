@@ -3,12 +3,12 @@ const cors = require("cors");
 const axios = require("axios");
 require("dotenv").config();
 const app = express();
-const PORT = 8080;
+const PORT = process.env.PORT || 8080;
+
+const baseURL = process.env.VERCEL_URL || `http://localhost:8080`;
 
 function middleware(req, res, next) {
   const testApiValue = process.env.TEST_API;
-  // Use testApiValue in your middleware logic
-  console.log("TEST_API value:", testApiValue);
   next();
 }
 
