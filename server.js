@@ -8,6 +8,7 @@ const baseURL = process.env.VERCEL_URL || `http://localhost:8080`;
 
 function middleware(req, res, next) {
   const testApiValue = process.env.TEST_API;
+  const testURL = process.env.VERCEL_URL;
   next();
 }
 
