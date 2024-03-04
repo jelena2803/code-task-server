@@ -13,7 +13,7 @@ function middleware(req, res, next) {
 }
 
 app.use(cors());
-app.use(customMiddleware);
+app.use(middleware);
 
 app.get("/houses", async (req, res) => {
   const { name } = req.query;
